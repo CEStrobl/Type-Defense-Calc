@@ -1,0 +1,163 @@
+* {
+    font-family: Helvetica;
+    color:white;
+    background-color: #1b1c25;
+}
+
+
+
+
+select {
+    width: 150px;
+    font-size: 18px;
+    padding: 10px 14px;
+    border: 2px solid #838383;
+    border-radius: 4px;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+
+select:hover {
+    background-color: #838383;
+    color: white;
+}
+
+
+
+
+
+.button {
+    width: 400px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+.red {
+    background-color: transparent; 
+    color: white; 
+    border: 2px solid #f44336;
+}
+  
+.red:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+
+.column {
+    float: left;
+    /* width: 40%; */
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+/* ghost evidence info */
+.column2 {
+    padding: 0px;
+    text-align: center;
+    float: left;
+    width: 180px;
+    border:none;
+    margin: 0px;
+}
+.column2 h3{
+    text-align: left;
+}
+
+/* evidence */
+.column3 {
+    float: left;
+    width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+    .column2 {
+        width: 100%;
+    }
+
+    .column3 {
+        width: 100%;
+    }
+
+    .column4 {
+        width: 100%;
+    }
+  
+
+}
+
+
+
+
+table, th, tr, td {
+    margin:0px;
+    padding:0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    border:none;
+}
+th {
+    border:none;
+    padding: 3px;
+    width: 64px;
+    height: 32px;
+}
+td {
+    border:none;
+    margin: 0px;
+    height: 64px;
+}
+table {
+    border: 1px solid #ffffff;
+}
+
+.small th{
+    font-size: 13px;
+    height: 28px;
+    width: 64px;
+    border: 1px solid #ffffff;
+}
+
+
+
+.large th{
+    font-size: 20px;
+    height: 64px;
+    width: 144px;
+    border: 1px solid #ffffff;
+}
+
+.rec th, tr, td{
+    border:none;
+}
+.rec {
+    border:none;
+}
+
+p {
+    color:#6a6d889b;
+    font-style: italic;
+}

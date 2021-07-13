@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="heavyball.png">
+    <title>Type Defense Calculator</title>
+</head>
+<body>
+    <h1>Charlot's Pokemon Type Defense Calculator</h1>
+
+    
+
+    <div class="row">
+        <div class="column">
+
+            <h2>Choose a Type:</h2>
+            <br>
+    <label for="type1">Type1:</label>
+    <select name="type1" id="type1" onclick="loadStats()">
+        
+        <option value="bug">Bug</option>
+        <option value="dark">Dark</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fight">Fight</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="steel">Steel</option>
+        <option value="water">Water</option>
+    </select>
+
+    
+
+    <label for="type2">Type2:</label>
+    <select name="type2" id="type2" onclick="loadStats()">
+        <option value="none">(None)</option>
+        <option value="bug">Bug</option>
+        <option value="dark">Dark</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fight">Fight</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="steel">Steel</option>
+        <option value="water">Water</option>
+    </select>
+
+    <br><br>
+    <h3>Defense Stats:</h3>
+
+    <table>
+        <tr>
+            <th style="background-color: #6BA500;">Bug</th>
+            <th style="background-color: #36303d;">Dark</th>
+            <th style="background-color: #141483;">Dragon</th>
+            <th style="background-color: #958505;">Electric</th>
+            <th style="background-color: #d33dd3;">Fairy</th>
+            <th style="background-color: #770e0e;">Fight</th>
+            <th style="background-color: #9e5008;">Fire</th>
+            <th style="background-color: #416bad;">Flying</th>
+            <th style="background-color: #352758;">Ghost</th>
+        </tr>
+        <tr>
+            <td id="Bugstat"></td>
+            <td id="Darkstat"></td>
+            <td id="Dragonstat"></td>
+            <td id="Electricstat"></td>
+            <td id="Fairystat"></td>
+            <td id="Fightstat"></td>
+            <td id="Firestat"></td>
+            <td id="Flyingstat"></td>
+            <td id="Ghoststat"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th style="background-color: #098820;">Grass</th>
+            <th style="background-color: #794d18;">Ground</th>
+            <th style="background-color: #149daf;">Ice</th>
+            <th style="background-color: #88775b;">Normal</th>
+            <th style="background-color: #550c68;">Poison</th>
+            <th style="background-color: #8b0d7d;">Psychic</th>
+            <th style="background-color: #62400C;">Rock</th>
+            <th style="background-color: #6A7276;">Steel</th>
+            <th style="background-color: #12367e;">Water</th>
+        </tr>
+        <tr>
+            <td id="Grassstat"></td>
+            <td id="Groundstat"></td>
+            <td id="Icestat"></td>
+            <td id="Normalstat"></td>
+            <td id="Poisonstat"></td>
+            <td id="Psychicstat"></td>
+            <td id="Rockstat"></td>
+            <td id="Steelstat"></td>
+            <td id="Waterstat"></td>
+        </tr>
+    </table>
+
+
+
+    <br><br>
+    
+    <button class="button red"
+        id="reset"
+        onclick="location.reload()">
+            Reset
+    </button>
+    </div>
+
+    <div class="column">
+
+        <h2> Move Type Recommendation:</h2>
+        <p>(not fully finished)</p>
+
+        <p id="recStren"><br></p>
+
+        <div class="row">
+            <div class="column2">
+
+                <h3>Types to Use:</h3>
+
+                <table class="rec">
+                    <tr class="large">
+                        <th id="move1"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move2"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move3"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move4"></th>
+                    </tr>
+                    <tr class="large">
+                        <th id="move5"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move6"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move7"></th>
+                    </tr>
+                    <tr  class="large">
+                        <th id="move8"></th>
+                    </tr>
+    
+                </table>
+
+            </div>
+            <div class="column2">
+
+                <h3>Takes care of:</h3>
+                
+                <table class="rec">
+                    <tr class="small">
+                        <th id="move1sub1"></th>
+                        <th id="move1sub2"></th>
+                        <th id="move1sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move1sub4"></th>
+                        <th id="move1sub5"></th>
+                        <th id="move1sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move2sub1"></th>
+                        <th id="move2sub2"></th>
+                        <th id="move2sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move2sub4"></th>
+                        <th id="move2sub5"></th>
+                        <th id="move2sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move3sub1"></th>
+                        <th id="move3sub2"></th>
+                        <th id="move3sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move3sub4"></th>
+                        <th id="move3sub5"></th>
+                        <th id="move3sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move4sub1"></th>
+                        <th id="move4sub2"></th>
+                        <th id="move4sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move4sub4"></th>
+                        <th id="move4sub5"></th>
+                        <th id="move4sub6"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move5sub1"></th>
+                        <th id="move5sub2"></th>
+                        <th id="move5sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move5sub4"></th>
+                        <th id="move5sub5"></th>
+                        <th id="move5sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move6sub1"></th>
+                        <th id="move6sub2"></th>
+                        <th id="move6sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move6sub4"></th>
+                        <th id="move6sub5"></th>
+                        <th id="move6sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move7sub1"></th>
+                        <th id="move7sub2"></th>
+                        <th id="move7sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move7sub4"></th>
+                        <th id="move7sub5"></th>
+                        <th id="move7sub6"></th>
+                    </tr>
+
+                    <tr class="small">
+                        <th id="move8sub1"></th>
+                        <th id="move8sub2"></th>
+                        <th id="move8sub3"></th>
+                    </tr>
+                    <tr class="small">
+                        <th id="move8sub4"></th>
+                        <th id="move8sub5"></th>
+                        <th id="move8sub6"></th>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
