@@ -835,7 +835,7 @@ function findMove(currentStats) {
         
                                 for(y = 0; y < 19; y++) {
 
-                                    if(TypeList[green][y] == 2) {
+                                    if(TypeList[green][y] >= 2) {
                                         if(TypeList[y+1].name == TypeList[o].name) {
                                             document.getElementById("move"+t+"sub"+k).innerHTML
                                             = weak[blue]
@@ -884,7 +884,7 @@ function findMove(currentStats) {
 
                                     const weakIndex = y
 
-                                    if(getGroundStat[weakIndex] == 2) {
+                                    if(getGroundStat[weakIndex] >= 2) {
 
                                         //console.log(Ground," is weak to ", TypeList[weakIndex+1].name)
 
