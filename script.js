@@ -824,8 +824,6 @@ function findMove(currentStats) {
         for(i = 0; i < shortRec.length; i++) {
             if(TypeList[o].name == shortRec[i]) {
                 if(counts[TypeList[o].name] >= 2) {
-
-//                     document.getElementById("recStren").innerHTML = '<br>'
             
                     document.getElementById("move"+(t)).innerHTML = TypeList[o].name
 
