@@ -825,7 +825,7 @@ function findMove(currentStats) {
             if(TypeList[o].name == shortRec[i]) {
                 if(counts[TypeList[o].name] >= 2) {
 
-                    document.getElementById("recStren").innerHTML = '<br>'
+//                     document.getElementById("recStren").innerHTML = '<br>'
             
                     document.getElementById("move"+(t)).innerHTML = TypeList[o].name
 
@@ -864,7 +864,7 @@ function findMove(currentStats) {
         for(i = 0; i < shortRec.length; i++) {
             if(TypeList[o].name == shortRec[i]) {
                 if(strongRec == false) {
-                    document.getElementById("recStren").innerHTML = "*only slightly recommended"
+//                     document.getElementById("recStren").innerHTML = "*only slightly recommended"
                     document.getElementById("move"+(g)).innerHTML = TypeList[o].name
 
                     //i am electric
