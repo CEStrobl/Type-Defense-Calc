@@ -755,6 +755,8 @@ function findMove(currentStats) {
     let type1op = type1.options[type1.selectedIndex].text
     let type2op = type2.options[type2.selectedIndex].text
 
+    //console.log("I am ", type1op, type2op)
+
     let weak = []
     let recMoves = []
 
@@ -779,7 +781,7 @@ function findMove(currentStats) {
     
 
     //identify weaknesses
-    for(i = 1; i < 19; i++) {
+    for(i = 0; i < 19; i++) {
         if(currentStats[i] == 2) {
             weak.push(TypeList[i+1].name) 
         }
@@ -847,6 +849,8 @@ function findMove(currentStats) {
                         }
                     }
 
+                    
+
                     t++ 
                     k=1
                     
@@ -863,18 +867,33 @@ function findMove(currentStats) {
                     document.getElementById("recStren").innerHTML = "*only slightly recommended"
                     document.getElementById("move"+(g)).innerHTML = TypeList[o].name
 
-                    for(blue = 0; blue < weak.length; blue++) {
+                    //i am electric
+
+                    const Grass = TypeList[o].name
+                    
+
+                    for(w = 0; w < weak.length; w++) {
+
+                        const Ground = weak[w]
 
                         for(green = 0; green < TypeList.length; green++) {
-               
-                            if(weak[blue] == TypeList[green].name) {
-        
+
+                            const getGroundStat = TypeList[green]
+
+                            if(Ground == getGroundStat.name) {
+                                //console.log("Found weakness, ", Ground, ", stats")
                                 for(y = 0; y < 19; y++) {
 
-                                    if(TypeList[green][y] == 2) {
-                                        if(TypeList[y+1].name == TypeList[o].name) {
-                                            document.getElementById("move"+t+"sub"+k).innerHTML
-                                            = weak[blue]
+                                    const weakIndex = y
+
+                                    if(getGroundStat[weakIndex] == 2) {
+
+                                        //console.log(Ground," is weak to ", TypeList[weakIndex+1].name)
+
+                                        if(TypeList[weakIndex+1].name == Grass) {
+                                            console.log("adding ", Ground, " to ", ("move"+t+"sub"+k))
+                                            document.getElementById("move"+g+"sub"+k).
+                                            innerHTML = Ground
                                             k++
                                         }
                                     }
@@ -890,11 +909,11 @@ function findMove(currentStats) {
         }
     }
 
-    // console.log("strongRec", strongRec)
+    console.log("strongRec", strongRec)
     
 
-    // console.log("weak = ",weak)
-    // console.log("shortRec = ",shortRec)
+    console.log("weak = ",weak)
+    console.log("shortRec = ",shortRec)
 
 }
 
