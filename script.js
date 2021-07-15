@@ -782,7 +782,7 @@ function findMove(currentStats) {
 
     //identify weaknesses
     for(i = 0; i < 19; i++) {
-        if(currentStats[i] == 2) {
+        if(currentStats[i] >= 2) {
             weak.push(TypeList[i+1].name) 
         }
     }
@@ -791,7 +791,7 @@ function findMove(currentStats) {
         for(o = 1; o < TypeList.length; o++) {  
             if(TypeList[o].name == weak[i]) {
                 for(z = 0; z < 19; z++) {
-                    if(TypeList[o][z] == 2) {
+                    if(TypeList[o][z] >= 2) {
                         recMoves.push(TypeList[z+1].name)
                     }
                 }
